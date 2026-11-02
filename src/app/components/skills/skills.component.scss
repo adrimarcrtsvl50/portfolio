@@ -1,0 +1,102 @@
+.skills {
+  background: var(--color-bg-secondary);
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  
+  .section-title {
+    display: inline-block;
+    
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.skills-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-top: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: var(--transition-medium);
+  box-shadow: var(--shadow-soft);
+  
+  &:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card);
+  }
+  
+  &.featured {
+    border-color: var(--color-accent-primary);
+    background: linear-gradient(135deg, rgba(232, 74, 95, 0.05) 0%, rgba(42, 157, 143, 0.05) 100%);
+  }
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.category-icon {
+  font-size: 1.5rem;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: 25px;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  transition: var(--transition-fast);
+  
+  &:hover {
+    background: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+    color: white;
+    transform: translateY(-2px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-tag {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}

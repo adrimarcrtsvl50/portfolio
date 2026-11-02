@@ -1,0 +1,80 @@
+<section class="gallery section" id="proyectos">
+  <div class="container">
+    <div class="gallery-header">
+      <h2 class="section-title">Proyectos</h2>
+      <p class="gallery-subtitle">
+        Trabajos y sistemas que he desarrollado
+      </p>
+    </div>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let project of projects" (click)="openModal(project)">
+        <div class="gallery-image">
+          <img [src]="project.images[0]" [alt]="project.title">
+          <div class="gallery-overlay">
+            <span class="view-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.35-4.35"/>
+                <path d="M11 8v6M8 11h6"/>
+              </svg>
+            </span>
+            <span class="image-count">{{ project.images.length }} imágenes</span>
+          </div>
+        </div>
+        <div class="gallery-info">
+          <h3 class="gallery-title">{{ project.title }}</h3>
+          <p class="gallery-company">{{ project.company }}</p>
+          <div class="gallery-tags">
+            <span class="gallery-tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal con carrusel -->
+  <div class="modal" *ngIf="selectedProject" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="modal-close" (click)="closeModal()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+      
+      <div class="carousel">
+        <button class="carousel-btn prev" (click)="prevImage()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        
+        <img [src]="selectedProject.images[currentImageIndex]" [alt]="selectedProject.title" class="modal-image">
+        
+        <button class="carousel-btn next" (click)="nextImage()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="carousel-dots">
+        <button 
+          *ngFor="let img of selectedProject.images; let i = index"
+          class="dot"
+          [class.active]="i === currentImageIndex"
+          (click)="goToImage(i)">
+        </button>
+      </div>
+      
+      <div class="modal-info">
+        <h3>{{ selectedProject.title }}</h3>
+        <p class="modal-company">{{ selectedProject.company }}</p>
+        <p class="modal-description">{{ selectedProject.description }}</p>
+        <div class="modal-tags">
+          <span class="modal-tag" *ngFor="let tag of selectedProject.tags">{{ tag }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

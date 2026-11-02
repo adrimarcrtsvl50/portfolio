@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Adriana Marcela Cortés Vela</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background: #fff;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 3px solid #E84A5F;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    h1 { color: #2d3436; font-size: 2.2rem; margin-bottom: 5px; }
+    .subtitle { color: #E84A5F; font-size: 1.1rem; font-weight: 600; }
+    .contact-info {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #636e72;
+    }
+    .contact-info span { margin: 0 10px; }
+    h2 {
+      color: #E84A5F;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+      margin: 25px 0 15px;
+    }
+    .section { margin-bottom: 20px; }
+    .job {
+      margin-bottom: 20px;
+      padding-left: 15px;
+      border-left: 3px solid #E84A5F;
+    }
+    .job-title { font-weight: 700; color: #2d3436; }
+    .job-company { color: #E84A5F; font-weight: 600; }
+    .job-date { color: #636e72; font-size: 0.9rem; font-style: italic; }
+    .job-desc { margin-top: 8px; font-size: 0.95rem; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    .skill-category h3 {
+      font-size: 1rem;
+      color: #2d3436;
+      margin-bottom: 8px;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .tag {
+      background: #f8f9fa;
+      border: 1px solid #ddd;
+      padding: 3px 10px;
+      border-radius: 15px;
+      font-size: 0.85rem;
+    }
+    .edu-item { margin-bottom: 10px; }
+    .edu-degree { font-weight: 600; }
+    .edu-school { color: #636e72; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #E84A5F;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .print-btn:hover { background: #d63649; }
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">📄 Guardar como PDF</button>
+  
+  <div class="header">
+    <h1>ADRIANA MARCELA CORTÉS VELA</h1>
+    <p class="subtitle">Ingeniera de Sistemas | Frontend Developer &amp; QA Analyst</p>
+    <div class="contact-info">
+      <span>📧 adrimarcela50@hotmail.com</span>
+      <span>📱 +57 313 218 1048</span>
+      <span>📍 Bogotá, Colombia</span>
+    </div>
+    <div class="contact-info">
+      <span>🔗 linkedin.com/in/adriana-marcela-cortes-vela-12b590266</span>
+      <span>💻 github.com/adrimarcrtsvl50</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>👤 PERFIL PROFESIONAL</h2>
+    <p>
+      Ingeniera de Sistemas especializada en Desarrollo Frontend con Angular y Aseguramiento de Calidad de Software (QA).
+      Experiencia en la construcción de interfaces escalables, consumo e integración de APIs REST y optimización de código
+      mediante análisis estático con SonarQube. Amplia experiencia técnica en JavaScript, TypeScript, HTML5, CSS3, Bootstrap,
+      C#, .NET y gestión de bases de datos relacionales en SQL Server. Sólida trayectoria en metodologías de pruebas
+      funcionales y automatizadas para proyectos del sector público y privado (GOV.CO). Destacada capacidad de autoaprendizaje,
+      liderazgo técnico y adaptación a arquitecturas complejas.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>💼 EXPERIENCIA LABORAL</h2>
+
+    <div class="job">
+      <p class="job-title">Programadora y Desarrolladora de Software</p>
+      <p class="job-company">TIGLOBAL S.A.S. — Bogotá, Colombia</p>
+      <p class="job-date">Febrero 2022 – Octubre 2026</p>
+      <p class="job-desc">
+        • Diseño e implementación de aplicaciones web con Angular y TypeScript<br>
+        • Maquetación responsive con Bootstrap 4.6 y Bootstrap Angular<br>
+        • Soporte, refactorización y resolución de incidencias en soluciones críticas
+      </p>
+    </div>
+
+    <div class="job">
+      <p class="job-title">Analista QA</p>
+      <p class="job-company">Unión Temporal Colombia Digital Conectada (Proyecto GOV.CO) — Bogotá, Colombia</p>
+      <p class="job-date">Julio 2025 – Diciembre 2025</p>
+      <p class="job-desc">
+        • Pruebas funcionales y suites de pruebas automatizadas del portal GOV.CO<br>
+        • Análisis estático con SonarQube: bugs, vulnerabilidades y deuda técnica<br>
+        • Casos de prueba, matrices de trazabilidad y reportes de ejecución
+      </p>
+    </div>
+
+    <div class="job">
+      <p class="job-title">Desarrolladora</p>
+      <p class="job-company">InfoDesign Colombia S.A.S. — Bogotá, Colombia</p>
+      <p class="job-date">Septiembre 2020 – Diciembre 2020</p>
+      <p class="job-desc">
+        • Componentes web sobre Angular y Bootstrap para proyectos del sector de ciencia y tecnología
+      </p>
+    </div>
+
+    <div class="job">
+      <p class="job-title">Técnica de Aplicaciones (Pasantía)</p>
+      <p class="job-company">Amézquita &amp; Cía — Bogotá, Colombia</p>
+      <p class="job-date">Abril 2020 – Septiembre 2020</p>
+      <p class="job-desc">
+        • Reportes y análisis con consultas complejas en Microsoft SQL Server<br>
+        • Documentación de procesos y pruebas de validación funcional
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🎓 EDUCACIÓN</h2>
+    <div class="edu-item">
+      <p class="edu-degree">Ingeniería de Sistemas — 2021</p>
+      <p class="edu-school">Universidad Libre — Bogotá, Colombia</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🛠️ COMPETENCIAS TÉCNICAS</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <div class="skill-tags">
+          <span class="tag">Angular</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">React</span>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>QA y calidad de código</h3>
+        <div class="skill-tags">
+          <span class="tag">SonarQube</span>
+          <span class="tag">Postman</span>
+          <span class="tag">OWASP ZAP</span>
+          <span class="tag">Lighthouse</span>
+          <span class="tag">JMeter</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Backend y lenguajes</h3>
+        <div class="skill-tags">
+          <span class="tag">C#</span>
+          <span class="tag">.NET</span>
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+          <span class="tag">PHP</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Visual Basic</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Datos, analítica y metodologías</h3>
+        <div class="skill-tags">
+          <span class="tag">SQL Server</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Git</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Arquitectura de software</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📜 CERTIFICACIONES</h2>
+    <ul style="margin-left: 20px;">
+      <li>Frontend Developer: Angular y TypeScript (Udemy)</li>
+      <li>Diseño Web (Udemy)</li>
+      <li>Microsoft Power BI (Universidad Libre)</li>
+      <li>SonarQube y mejora de la calidad del código (Udemy)</li>
+      <li>JavaScript, Bootstrap y PHP (Udemy)</li>
+      <li>n8n + MCP: automatización y agentes de IA (Udemy)</li>
+    </ul>
+  </div>
+
+</body>
+</html>
+

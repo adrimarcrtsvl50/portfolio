@@ -1,0 +1,200 @@
+.about {
+  background: var(--color-bg-secondary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Image Section */
+.about-image {
+  position: relative;
+}
+
+.image-frame {
+  position: relative;
+  max-width: 350px;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--color-bg-tertiary) 0%, var(--color-bg-primary) 100%);
+  border-radius: 24px;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-accent-gradient);
+    opacity: 0.03;
+  }
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.frame-decoration {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-accent-primary);
+  border-radius: 24px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -15px;
+  right: -20px;
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-accent-primary);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-card);
+}
+
+.exp-number {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  background: var(--color-accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.exp-text {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+/* Content Section */
+.about-content {
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Highlights */
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: var(--color-bg-tertiary);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.highlight-icon {
+  font-size: 1.25rem;
+}
+
+.highlight-text {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.about-intro {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.about-text {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.about-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.cert-list {
+  margin: 0 0 2rem 1.15rem;
+  line-height: 1.7;
+
+  li + li {
+    margin-top: 0.35rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .about-image {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-frame {
+    max-width: 280px;
+  }
+  
+  .experience-badge {
+    right: -10px;
+    bottom: -10px;
+    padding: 0.875rem 1rem;
+  }
+  
+  .exp-number {
+    font-size: 1.75rem;
+  }
+  
+  .about-highlights {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-text {
+    font-size: 0.875rem;
+  }
+  
+  .about-intro {
+    font-size: 1.1rem;
+  }
+}

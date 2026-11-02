@@ -1,0 +1,32 @@
+<section class="projects section" id="experiencia">
+  <div class="container">
+    <div class="projects-header">
+      <h2 class="section-title">Experiencia</h2>
+      <p class="projects-subtitle">
+        Mi trayectoria profesional
+      </p>
+    </div>
+    
+    <div class="projects-grid">
+      <article class="project-card" *ngFor="let project of projects">
+        <div class="project-image">
+          <div class="image-placeholder" [style.background]="project.gradient">
+            <span class="project-icon">💼</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <span class="project-period">{{ project.period }}</span>
+          </div>
+          <p class="project-company">{{ project.company }}</p>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-tags">
+            <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

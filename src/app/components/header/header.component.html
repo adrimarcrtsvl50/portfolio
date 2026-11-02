@@ -1,0 +1,20 @@
+<header class="header" [class.scrolled]="isScrolled">
+  <nav class="nav container">
+    <a href="#" class="logo">
+      <span class="logo-text">AC</span>
+    </a>
+    
+    <ul class="nav-links" [class.active]="menuOpen">
+      <li><a href="#inicio" (click)="closeMenu()">Inicio</a></li>
+      <li><a href="#sobre-mi" (click)="closeMenu()">Sobre mí</a></li>
+      <li><a href="#habilidades" (click)="closeMenu()">Competencias</a></li>
+      <li><a href="#experiencia" (click)="closeMenu()">Experiencia</a></li>
+      <li><a href="#proyectos" (click)="closeMenu()">Proyectos</a></li>
+      <li><a href="#contacto" (click)="closeMenu()" class="btn-contact">Contacto</a></li>
+    </ul>
+    
+    <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen">
+      <span class="hamburger" [class.active]="menuOpen"></span>
+    </button>
+  </nav>
+</header>
